@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  frontend:
+    container_name: fornt
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react-app:/app               # ホスト側と同期
+      - /app/node_modules              # node_modulesは除外（上書き防止）
+    environment:
+      - CHOKIDAR_USEPOLLING=true       # ホットリロード有効化
+

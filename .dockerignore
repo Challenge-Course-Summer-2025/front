@@ -1,0 +1,20 @@
+# node_modules はホストとマウントするので不要
+react-app/node_modules
+
+# ログ・OSファイル
+**/*.log
+.DS_Store
+
+# Git 管理外ファイル
+.git
+.gitignore
+
+# 編集ソフトの設定ファイル
+.vscode
+.idea
+
+# Docker 自身の設定
+Dockerfile
+docker-compose.yml
+.dockerignore
+
